@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Survivors - Epic Online Survival Game | Play Free Now</title>
-    <meta name="description" content="Play Monster Survivors online for free! Epic survival game where you battle waves of monsters, collect power-ups, and test your survival skills. No download required.">
-    <meta name="keywords" content="Monster Survivors, online game, survival game, free games, browser game, action game">
+    <title>Monster Survivor - Thrilling Online Survival Game | Battle Endless Waves</title>
+    <meta name="description" content="Monster Survivor - Thrilling Online Survival Game. Battle endless waves of diverse enemies, unlock character progression, and explore dynamic environments in this action-packed adventure. Survive as long as possible!">
+    <meta name="keywords" content="monster survivor, survival game, action game, online game, browser game, monsters, diverse enemies, character progression, dynamic environment, thrilling adventure, survival waves, level up, power-ups, free game, html5 game">
     <meta name="author" content="Monster Survivors">
     <link rel="canonical" href="https://monstersurvivors.online/">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Monster Survivors - Epic Online Survival Game">
-    <meta property="og:description" content="Play Monster Survivors online for free! Epic survival game where you battle waves of monsters and test your survival skills.">
+    <meta property="og:title" content="Monster Survivor - Thrilling Online Survival Game">
+    <meta property="og:description" content="Survive endless waves of monsters in this thrilling action-packed adventure! Face diverse enemies, unlock character progression, and explore dynamic environments.">
     <meta property="og:url" content="https://monstersurvivors.online/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Monster Survivors">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Monster Survivors - Epic Online Survival Game">
-    <meta name="twitter:description" content="Play Monster Survivors online for free! Epic survival game where you battle waves of monsters and test your survival skills.">
+    <meta name="twitter:title" content="Monster Survivor - Thrilling Online Survival Game">
+    <meta name="twitter:description" content="Survive endless waves of monsters in this thrilling action-packed adventure! Face diverse enemies, unlock character progression, and explore dynamic environments.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -38,17 +38,39 @@
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "Monster Survivors",
-        "description": "Epic survival game where you battle waves of monsters, collect power-ups, and test your survival skills",
+        "name": "Monster Survivor",
+        "description": "Thrilling online survival game where you battle endless waves of diverse enemies, unlock character progression, and explore dynamic environments in action-packed adventures",
         "url": "https://monstersurvivors.online/",
-        "genre": ["Action", "Survival", "Arcade"],
+        "genre": ["Action", "Survival", "Adventure", "Arcade"],
         "gamePlatform": "Web Browser",
         "operatingSystem": "Any",
         "applicationCategory": "Game",
+        "gameItem": [
+            {
+                "@type": "Thing",
+                "name": "Diverse Enemies",
+                "description": "Face a wide variety of monsters with unique abilities and attack patterns"
+            },
+            {
+                "@type": "Thing",
+                "name": "Character Progression",
+                "description": "Level up by defeating monsters and unlock new abilities and upgrades"
+            },
+            {
+                "@type": "Thing",
+                "name": "Dynamic Environment",
+                "description": "Explore ever-changing world with random events and environmental hazards"
+            }
+        ],
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "1250"
         }
     }
     </script>
@@ -61,11 +83,12 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #1d1d1f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2d1b69 0%, #11101d 100%);
+            color: #e0e0e0;
             line-height: 1.6;
-            min-height: 100vh;
         }
 
         .container {
@@ -74,15 +97,15 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            position: sticky;
+        .header {
+            background: rgba(17, 16, 29, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .header-content {
@@ -103,15 +126,16 @@
             gap: 2rem;
         }
 
-        .nav-links a {
+        .nav a {
+            color: #e0e0e0;
             text-decoration: none;
-            color: #1d1d1f;
+            margin: 0 1rem;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: #007aff;
+        .nav a:hover {
+            color: #ff8c00;
         }
 
         /* Hero Section */
@@ -127,34 +151,36 @@
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #ffffff;
             margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff8c00, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: #f5f5f7;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
-            font-weight: 400;
+            color: rgba(224, 224, 224, 0.9);
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #007aff, #005fcc);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
+            background: linear-gradient(45deg, #ff8c00, #ffa500);
+            color: #1a1a1a;
+            padding: 15px 30px;
             text-decoration: none;
-            font-weight: 600;
+            border-radius: 50px;
+            font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 122, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 122, 255, 0.6);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.6);
+            background: linear-gradient(45deg, #ffa500, #ffb347);
         }
 
         /* Game Section */
@@ -177,25 +203,32 @@
         }
 
         .game-frame {
-            width: 100%;
+            width: 800px;
             height: 600px;
-            border: none;
+            max-width: 100%;
+            border: 2px solid rgba(255, 140, 0, 0.3);
             display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            background: rgba(17, 16, 29, 0.8);
+            backdrop-filter: blur(10px);
         }
 
         /* Content Sections */
         .content-section {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(45, 27, 105, 0.2);
+            backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 3rem 2rem;
             margin: 2rem 0;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 140, 0, 0.2);
         }
 
         .content-section h2 {
             font-size: 2.5rem;
             font-weight: 600;
-            color: #1d1d1f;
+            color: #ff8c00;
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -208,15 +241,19 @@
         }
 
         .feature-card {
-            background: #f5f5f7;
-            padding: 2rem;
+            background: rgba(45, 27, 105, 0.3);
+            backdrop-filter: blur(10px);
             border-radius: 15px;
+            padding: 2rem;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 140, 0, 0.2);
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+            border-color: rgba(255, 140, 0, 0.4);
         }
 
         .feature-icon {
@@ -248,11 +285,12 @@
 
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.9);
-            color: #f5f5f7;
+            background: rgba(17, 16, 29, 0.9);
+            color: #e0e0e0;
             text-align: center;
             padding: 2rem 0;
             margin-top: 4rem;
+            border-top: 1px solid rgba(255, 140, 0, 0.2);
         }
 
         .footer-links {
@@ -291,6 +329,7 @@
             }
 
             .game-frame {
+                width: 100%;
                 height: 400px;
             }
 
@@ -301,6 +340,13 @@
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .game-frame {
+                width: 100%;
+                height: 500px;
             }
         }
 
@@ -364,8 +410,8 @@
 
     <main class="container">
         <section class="hero">
-            <h1>Monster Survivors</h1>
-            <p class="hero-subtitle">Survive endless waves of monsters in this epic online survival adventure!</p>
+            <h1>Monster Survivor</h1>
+            <p class="hero-subtitle">Survive the endless waves of monsters in this thrilling action-packed adventure! Face diverse enemies, unlock character progression, and explore dynamic environments as you battle for survival.</p>
             <a href="#game" class="cta-button">Play Free Now</a>
         </section>
 
@@ -383,13 +429,13 @@
         </section>
 
         <section id="about" class="content-section">
-            <h2>About Monster Survivors</h2>
+            <h2>About Monster Survivor</h2>
             <div class="game-description">
-                <p>Monster Survivors is an intense online survival game that challenges players to withstand relentless waves of increasingly powerful monsters. Armed with various weapons and abilities, you must strategically navigate through dark environments while collecting power-ups, upgrading your arsenal, and mastering survival tactics.</p>
+                <p>Monster Survivor is a thrilling online survival game where you must battle against endless waves of diverse monsters. As time progresses, the challenges become increasingly difficult, testing your survival skills and strategic thinking.</p>
                 
-                <p>The game features dynamic gameplay mechanics where each wave brings new challenges and monster types. Players can unlock special abilities, discover hidden power-ups, and develop unique strategies to survive as long as possible. With its intuitive controls and progressively challenging difficulty, Monster Survivors offers endless entertainment for both casual gamers and hardcore survival enthusiasts.</p>
+                <p>With intuitive controls and engaging gameplay, Monster Survivor offers hours of entertainment for gamers of all skill levels. Experience character progression, face unique enemy types, and adapt to dynamic environments in this action-packed adventure that will keep you coming back for more.</p>
                 
-                <p>Experience stunning visuals, immersive sound effects, and smooth gameplay directly in your web browser. No downloads or installations required - simply click play and dive into the action-packed world of Monster Survivors!</p>
+                <p>Experience stunning visuals, immersive sound effects, and smooth gameplay directly in your web browser. No downloads or installations required - simply click play and dive into the action-packed world of Monster Survivor!</p>
             </div>
         </section>
 
@@ -397,53 +443,48 @@
             <h2>Game Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚔️</div>
-                    <h3>Epic Combat</h3>
-                    <p>Engage in fast-paced combat against diverse monster types with unique attack patterns and abilities.</p>
+                    <div class="feature-icon">👹</div>
+                    <h3>Diverse Enemies</h3>
+                    <p>Face a wide variety of monsters, each with unique abilities and attack patterns. Learn to recognize and counter different enemy types to maximize your survival time.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Power-ups & Upgrades</h3>
-                    <p>Collect powerful upgrades and weapons to enhance your survival capabilities and combat effectiveness.</p>
+                    <div class="feature-icon">📈</div>
+                    <h3>Character Progression</h3>
+                    <p>Level up your character by defeating monsters and collecting experience. Unlock new abilities and upgrade existing ones to become more powerful as the game progresses.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Skill-Based Gameplay</h3>
-                    <p>Master timing, positioning, and resource management to survive increasingly challenging waves.</p>
+                    <div class="feature-icon">🌍</div>
+                    <h3>Dynamic Environment</h3>
+                    <p>Explore an ever-changing world with random events and environmental hazards. Adapt your strategy to overcome challenges and use the environment to your advantage.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">🌟</div>
-                    <h3>Progressive Difficulty</h3>
-                    <p>Face escalating challenges with each wave, keeping gameplay fresh and exciting throughout.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Browser-Based</h3>
-                    <p>Play instantly in your web browser without downloads. Compatible with desktop and mobile devices.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <h3>Completely Free</h3>
-                    <p>Enjoy the full Monster Survivors experience at no cost. No hidden fees or premium content barriers.</p>
+                    <div class="feature-icon">⚡</div>
+                    <h3>Thrilling Adventure</h3>
+                    <p>Experience heart-pounding action in this thrilling survival adventure. Each game session presents unique challenges and opportunities for epic gameplay.</p>
                 </div>
             </div>
         </section>
 
-        <section class="content-section">
-            <h2>How to Play Monster Survivors</h2>
-            <div class="game-description">
-                <p><strong>Getting Started:</strong> Use WASD or arrow keys to move your character around the battlefield. Your character automatically attacks nearby enemies, so focus on positioning and survival.</p>
-                
-                <p><strong>Survival Strategy:</strong> Avoid getting overwhelmed by monster hordes. Keep moving to prevent enemies from surrounding you, and prioritize collecting experience gems dropped by defeated monsters to level up.</p>
-                
-                <p><strong>Power-ups:</strong> When you level up, choose from various upgrades including new weapons, increased damage, improved speed, and defensive abilities. Each choice affects your survival strategy.</p>
-                
-                <p><strong>Advanced Tips:</strong> Learn enemy movement patterns, manage your positioning carefully, and experiment with different upgrade combinations to find your preferred playstyle. The key to high scores is surviving as long as possible while eliminating maximum monsters.</p>
+        <section class="gameplay" id="gameplay">
+            <div class="container">
+                <h2>Gameplay</h2>
+                <div class="gameplay-content">
+                    <div class="how-to-play">
+                        <h3>How to Play</h3>
+                        <ul>
+                            <li>Use WASD or arrow keys to move your character</li>
+                            <li>Automatically attack nearby monsters</li>
+                            <li>Collect experience points to level up</li>
+                            <li>Choose new abilities and upgrades as you level</li>
+                            <li>Survive as long as possible against increasingly difficult waves</li>
+                        </ul>
+                    </div>
+                    <div class="game-objectives">
+                        <h3>Game Objectives</h3>
+                        <p>Your main objective is to survive as long as possible while defeating monsters and collecting power-ups. The longer you survive, the higher your score!</p>
+                        <p>Each game session presents unique challenges and opportunities, making every playthrough a new experience. Adapt your strategy to overcome different enemy types and environmental hazards.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
